@@ -9,15 +9,15 @@ import './App.css';
 
 function App() {
   return (
-    <>
-    <Header />
+   
     <Router>
+      <Header />
       <Route exact path="/" component={About} />
       <Route exact path="/contact" component={Contact} />
       <Route exact path="/portfolio" component={Portfolio} />
+      <Footer />
     </Router>
-    <Footer />
-    </>
+    
     // <div className="App">
     //   <header className="App-header">
     //     <img src={logo} className="App-logo" alt="logo" />

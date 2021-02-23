@@ -36,7 +36,7 @@ function Contact() {
                                 <div className="form-group row">
                                     <div className="col-sm-2"></div>
                                     <div className="col-sm-10">
-                                        <button type="submit" class="btn btn-primary">Message Me!</button>
+                                        <button type="submit" className="btn btn-primary">Message Me!</button>
                                     </div>
                                 </div>
                             </form>

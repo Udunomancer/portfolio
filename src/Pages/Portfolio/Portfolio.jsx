@@ -6,32 +6,32 @@ function Portfolio() {
     
     let projects = [
         {
-            image: "https://via.placeholder.com/300x300",
+            image: require("../../Assets/Images/employee-directory.png").default,
             title: "Employee Directory",
             repository: "https://github.com/Udunomancer/emp-directory",
             page: "https://udunomancer.github.io/emp-directory/",
         },{
-            image: "https://via.placeholder.com/300x300",
+            image: require("../../Assets/Images/budget-tracker.png").default,
             title: "Budget Tracker",
             repository: "https://github.com/Udunomancer/gt-ft-budget-tracker",
             page: "https://budget-tracker-1234.herokuapp.com/",
         },{
-            image: "https://via.placeholder.com/300x300",
+            image: require("../../Assets/Images/workout-tracker.png").default,
             title: "Fitness Tracker",
             repository: "https://github.com/Udunomancer/gt-ft-workout-tracker",
             page: "https://kyle-fitness.herokuapp.com/",
         },{
-            image: "https://via.placeholder.com/300x300",
+            image: require("../../Assets/Images/game-board.png").default,
             title: "The Game Board",
             repository: "https://github.com/Udunomancer/project2-krypton",
             page: "https://thegameboard.herokuapp.com/",
         },{
-            image: "https://via.placeholder.com/300x300",
+            image: require("../../Assets/Images/burger-buddy.png").default,
             title: "Burger Buddy",
             repository: "https://github.com/Udunomancer/gt-ft-burger-buddy",
             page: "https://serene-lowlands-21111.herokuapp.com/",
         },{
-            image: "https://via.placeholder.com/300x300",
+            image: require("../../Assets/Images/note-taker.png").default,
             title: "Note Taker",
             repository: "https://github.com/Udunomancer/gt-ft-note-taker",
             page: "https://guarded-island-65290.herokuapp.com/",

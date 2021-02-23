@@ -1,5 +1,6 @@
 import React from "react";
 import Project from "../../Components/Project/Project";
+import ProjectRow from "../../Components/ProjectRow/ProjectRow";
 
 function Portfolio() {
     return (
@@ -11,16 +12,16 @@ function Portfolio() {
                             <h1 className="border-bottom py-3"><strong>Portfolio</strong></h1>
                         </div>
                     </div>
-                    <div className="row m-2 py-2">
+                    <ProjectRow>
                         <Project />
                         <Project />
                         <Project />
-                    </div>
-                    <div className="row m-2 py-2">
+                    </ProjectRow>
+                    <ProjectRow>
                         <Project />
                         <Project />
                         <Project />
-                    </div>
+                    </ProjectRow>
                 </div>
             </div>
         </div>

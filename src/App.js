@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import {HashRouter as Router, Route} from "react-router-dom";
+import Wrapper from "./Components/Wrapper/Wrapper";
 import About from "./Pages/About/About";
 import Contact from "./Pages/Contact/Contact";
 import Portfolio from "./Pages/Portfolio/Portfolio";
@@ -12,9 +13,11 @@ function App() {
    
     <Router>
       <Header />
-      <Route exact path="/" component={About} />
-      <Route exact path="/contact" component={Contact} />
-      <Route exact path="/portfolio" component={Portfolio} />
+      <Wrapper>
+        <Route exact path="/" component={About} />
+        <Route exact path="/contact" component={Contact} />
+        <Route exact path="/portfolio" component={Portfolio} />
+      </Wrapper>
       <Footer />
     </Router>
     

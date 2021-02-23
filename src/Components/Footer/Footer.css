@@ -1,0 +1,12 @@
+footer {
+    min-height: 100px;
+    position: relative;
+}
+
+footer div {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 3px;
+}

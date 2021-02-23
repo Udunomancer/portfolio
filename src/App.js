@@ -1,5 +1,5 @@
 import logo from './logo.svg';
-import {HashRouter as Router, Route} from "react-router-dom";
+import {HashRouter as Router, Route, Switch} from "react-router-dom";
 import Wrapper from "./Components/Wrapper/Wrapper";
 import About from "./Pages/About/About";
 import Contact from "./Pages/Contact/Contact";
@@ -14,9 +14,12 @@ function App() {
     <Router>
       <Header />
       <Wrapper>
-        <Route exact path="/" component={About} />
-        <Route exact path="/contact" component={Contact} />
-        <Route exact path="/portfolio" component={Portfolio} />
+        <Switch>
+          <Route exact path="/about" component={About} />
+          <Route exact path="/contact" component={Contact} />
+          <Route exact path="/portfolio" component={Portfolio} />
+          <Route path="/*" component={About} />
+        </Switch>
       </Wrapper>
       <Footer />
     </Router>

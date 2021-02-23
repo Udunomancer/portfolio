@@ -29,8 +29,8 @@ function Header() {
         <ul className="navbar-nav">
           <li className="nav-item">
             <NavLink
-              to="/"
-              className={window.location.pathname === "/" ? "nav-link active" : "nav-link"}
+              to="/about"
+              className={window.location.pathname === "/about" ? "nav-link active" : "nav-link"}
             >
               About
             </NavLink>

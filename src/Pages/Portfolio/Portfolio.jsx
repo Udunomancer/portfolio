@@ -3,6 +3,41 @@ import Project from "../../Components/Project/Project";
 import ProjectRow from "../../Components/ProjectRow/ProjectRow";
 
 function Portfolio() {
+    
+    let projects = [
+        {
+            image: "https://via.placeholder.com/300x300",
+            title: "Employee Directory",
+            repository: "https://github.com/Udunomancer/emp-directory",
+            page: "https://udunomancer.github.io/emp-directory/",
+        },{
+            image: "https://via.placeholder.com/300x300",
+            title: "Employee Directory",
+            repository: "https://github.com/Udunomancer/emp-directory",
+            page: "https://udunomancer.github.io/emp-directory/",
+        },{
+            image: "https://via.placeholder.com/300x300",
+            title: "Employee Directory",
+            repository: "https://github.com/Udunomancer/emp-directory",
+            page: "https://udunomancer.github.io/emp-directory/",
+        },{
+            image: "https://via.placeholder.com/300x300",
+            title: "Employee Directory",
+            repository: "https://github.com/Udunomancer/emp-directory",
+            page: "https://udunomancer.github.io/emp-directory/",
+        },{
+            image: "https://via.placeholder.com/300x300",
+            title: "Employee Directory",
+            repository: "https://github.com/Udunomancer/emp-directory",
+            page: "https://udunomancer.github.io/emp-directory/",
+        },{
+            image: "https://via.placeholder.com/300x300",
+            title: "Employee Directory",
+            repository: "https://github.com/Udunomancer/emp-directory",
+            page: "https://udunomancer.github.io/emp-directory/",
+        }
+    ]
+
     return (
         <div className="container">
             <div className="row">
@@ -13,14 +48,14 @@ function Portfolio() {
                         </div>
                     </div>
                     <ProjectRow>
-                        <Project />
-                        <Project />
-                        <Project />
+                        <Project project={projects[0]} />
+                        <Project project={projects[1]} />
+                        <Project project={projects[2]} />
                     </ProjectRow>
                     <ProjectRow>
-                        <Project />
-                        <Project />
-                        <Project />
+                        <Project project={projects[3]} />
+                        <Project project={projects[4]} />
+                        <Project project={projects[5]} />
                     </ProjectRow>
                 </div>
             </div>

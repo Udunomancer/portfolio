@@ -1,6 +1,7 @@
 import React from "react";
 import Project from "../../Components/Project/Project";
 import ProjectRow from "../../Components/ProjectRow/ProjectRow";
+import "./Portfolio.css";
 
 function Portfolio() {
     
@@ -39,9 +40,9 @@ function Portfolio() {
     ]
 
     return (
-        <div className="container">
+        <div id="portfolio-page" className="container mt-3">
             <div className="row">
-                <div className="col-md-12 bg-white py-3 mx-2">
+                <div className="col-md-12 py-3 mx-2">
                     <div className="row mx-2">
                         <div className="col-sm-12">
                             <h1 className="border-bottom py-3"><strong>Portfolio</strong></h1>

@@ -1,4 +1,5 @@
 import resume from "../../Assets/Resume.pdf";
+import "./Contact.css";
 
 function Contact() {
     
@@ -16,9 +17,9 @@ function Contact() {
     // }
     
     return (
-        <div className="container">
+        <div id="contact-page" className="container pt-2">
             <div className="row">
-                <div className="col-md-9 bg-white py-3 mx-2">
+                <div id="contact-div" className="col-md-9 py-3 mx-2">
                     <div className="row mx-2">
                         <div className="col-sm-12">
                             <h1 className="border-bottom py-3"><strong>Contact</strong></h1>

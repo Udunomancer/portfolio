@@ -1,27 +1,10 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import "./Header.css";
 
 function Header() {
   return (
-    // <header>
-    //   <nav className="navbar navbar-light bg-white">
-    //       <div className="navbar-nav">
-    //         {/* <li className="nav-item">
-    //           <NavLink className="nav-link" to="/">About</NavLink>
-    //         </li>
-    //         <li className="nav-item">
-    //           <NavLink className="nav-link" to="/contact">Contact</NavLink>
-    //         </li>
-    //         <li className="nav-item">
-    //           <NavLink className="nav-link" to="/portfolio">Portfolio</NavLink>
-    //         </li> */}
-    //         <NavLink className="nav-item nav-link" to="/">Home</NavLink>
-    //         <NavLink className="nav-item nav-link" to="/contact">Contact</NavLink>
-    //         <NavLink className="nav-item nav-link" to="/portfolio">Portfolio</NavLink>
-    //       </div>
-    //   </nav>
-    // </header>
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+    <nav id="navbar" className="navbar navbar-expand-lg navbar-dark">
       <NavLink className="navbar-brand" to="/">
         Kyle Chriscoe:
       </NavLink>
@@ -46,7 +29,7 @@ function Header() {
           <li className="nav-item">
               <NavLink
                 to="/portfolio"
-                className={window.location.pathname === "/portfolio" ? "nav-link active" : "nav-link"}
+                className={window.location.pathname === "/portfolio#/portfolio" ? "nav-link active" : "nav-link"}
               >
                   Portfolio
               </NavLink>

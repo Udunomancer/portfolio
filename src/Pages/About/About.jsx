@@ -1,12 +1,13 @@
 import React from "react";
+import "./About.css";
 
 function About() {
     const profile = require("../../Assets/Images/profile.png").default;
 
     return (
-        <div className="container">
+        <div id="about-page" className="container pt-2">
             <div className="row">
-                <div className="col-md-9 bg-white py-3 mx-2">
+                <div className="about-page col-md-9 py-3 mx-2">
                     <div className="row mx-2">
                         <div className="col-sm-12">
                             <h1 className="border-bottom py-3"><strong>About</strong></h1>

@@ -11,16 +11,16 @@ function App() {
   return (
    
     <Router>
-      <Header />
       <Wrapper>
+        <Header />
         <Switch>
           <Route exact path="/about" component={About} />
           <Route exact path="/contact" component={Contact} />
           <Route exact path="/portfolio" component={Portfolio} />
           <Route path="/*" component={About} />
         </Switch>
+        <Footer />
       </Wrapper>
-      <Footer />
     </Router>
   );
 }

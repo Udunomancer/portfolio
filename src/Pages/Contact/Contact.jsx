@@ -22,13 +22,13 @@ function Contact() {
                         <div className="col-sm-8">
                             <form>
                                 <div className="form-group row">
-                                    <label for="email" className="col-sm-2 col-form-label">Email</label>
+                                    <label htmlFor="email" className="col-sm-2 col-form-label">Email</label>
                                     <div className="col-sm-10">
                                         <input type="email" className="form-control" id="email" placeholder="Your Email Address"></input>
                                     </div>
                                 </div>
                                 <div className="form-group row">
-                                    <label for="message" className="col-sm-2 col-form-label">Message</label>
+                                    <label htmlFor="message" className="col-sm-2 col-form-label">Message</label>
                                     <div className="col-sm-10">
                                         <textarea className="form-control" id="message" rows="4" placeholder="Your Message"></textarea>
                                     </div>

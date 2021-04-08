@@ -2,11 +2,9 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 // import Material-UI components
-import { AppBar, Button, IconButton, Toolbar, Typography } from "@material-ui/core";
+import { AppBar, Button, Toolbar, Typography } from "@material-ui/core";
 // import Component specific JSS
 import useStyles from "./HeaderStyle";
-// import Material-UI icons
-import AcUnitRoundedIcon from "@material-ui/icons/AcUnitRounded";
 
 function Header() {
   const classes = useStyles();

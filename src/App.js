@@ -15,7 +15,6 @@ import Header from "./Components/Header/Header";
 import Footer from "./Components/Footer/Footer";
 
 function App() {
-  
   const [appTheme, setAppTheme] = useState(true);
   const theme = appTheme ? { ...DarkMode } : { ...LightMode };
   // const theme = React.useMemo(
@@ -28,12 +27,12 @@ function App() {
       <ThemeProvider theme={theme}>
         {/* <Container width="100vh"> */}
         {/* <Paper style={{ height: "100vh" }}> */}
-          {/* <Grid container direction="column"> */}
-            {/* <Grid item> */}
-              <Header />
-            {/* </Grid> */}
-            <Main />
-            {/* <Grid container item>
+        {/* <Grid container direction="column"> */}
+        {/* <Grid item> */}
+        <Header appTheme={appTheme} setAppTheme={setAppTheme}/>
+        {/* </Grid> */}
+        <Main />
+        {/* <Grid container item>
               <Grid item xs={false} sm={2} >
                 <MUISwitch 
                   checked={appTheme}
@@ -50,8 +49,8 @@ function App() {
               </Grid>
               <Grid item xs={false} sm={2} />
             </Grid> */}
-          {/* </Grid> */}
-          <Footer />
+        {/* </Grid> */}
+        <Footer />
         {/* </Paper> */}
       </ThemeProvider>
     </Router>

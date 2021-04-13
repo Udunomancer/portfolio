@@ -2,11 +2,15 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 // import Material-UI components
-import { AppBar, Button, Toolbar, Typography } from "@material-ui/core";
+import AppBar from "@material-ui/core/AppBar";
+import Button from "@material-ui/core/Button";
+import Switch from "@material-ui/core/Switch";
+import Toolbar from "@material-ui/core/Toolbar";
+import Typography from "@material-ui/core/Typography";
 // import Component specific JSS
 import useStyles from "./HeaderStyle";
 
-function Header() {
+function Header({appTheme, setAppTheme}) {
   const classes = useStyles();
 
   return (
@@ -24,6 +28,10 @@ function Header() {
         <Button component={NavLink} to="/portfolio">
           Portfolio
         </Button>
+        <Switch
+          checked={appTheme}
+          onChange={() => setAppTheme(!appTheme)}
+        />
       </Toolbar>
     </AppBar>
     // <nav id="navbar" className="navbar navbar-expand-lg navbar-dark">

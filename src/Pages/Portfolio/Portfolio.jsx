@@ -8,9 +8,9 @@ import ProjectCard from "../../Components/ProjectCard/ProjectCard";
 import Projects from "../../Utils/Projects";
 
 function Portfolio() {
-  const getProjectDetails = (projectDetailsObj) => {
+  const getProjectDetails = (projectDetailsObj, index) => {
     return (
-      <Grid item xs={12} sm={6} md={4}>
+      <Grid key={index} item xs={12} sm={6} md={4}>
         <ProjectCard {...projectDetailsObj} />
       </Grid>
     );
@@ -18,8 +18,8 @@ function Portfolio() {
 
   return (
     <Grid container spacing={3}>
-      {Projects.map((projectDetailsObj) =>
-        getProjectDetails(projectDetailsObj)
+      {Projects.map((projectDetailsObj, index) =>
+        getProjectDetails(projectDetailsObj, index)
       )}
     </Grid>
   );

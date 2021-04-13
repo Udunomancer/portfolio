@@ -2,8 +2,8 @@
 import React, { useState } from "react";
 import { HashRouter as Router, Route, Switch } from "react-router-dom";
 // import Material-UI components
-import { Grid, Paper, Switch as MUISwitch, useMediaQuery } from "@material-ui/core";
-import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
+import { Grid, Paper, Switch as MUISwitch } from "@material-ui/core";
+import { ThemeProvider } from "@material-ui/core/styles";
 // import custom Material-UI Theme
 import { DarkMode, LightMode } from "./Utils/Theming";
 // import custom Components/Pages
@@ -29,7 +29,7 @@ function App() {
               <Header />
             </Grid>
             <Grid container item>
-              <Grid item xs={0} sm={2} >
+              <Grid item xs={false} sm={2} >
                 <MUISwitch 
                   checked={appTheme}
                   onChange={() => setAppTheme(!appTheme)}
@@ -43,7 +43,7 @@ function App() {
                   <Route path="/*" component={About} />
                 </Switch>
               </Grid>
-              <Grid item xs={0} sm={2} />
+              <Grid item xs={false} sm={2} />
             </Grid>
           </Grid>
         </Paper>

@@ -14,9 +14,9 @@ function Header({appTheme, setAppTheme}) {
   const classes = useStyles();
 
   return (
-    <AppBar position="static">
+    <AppBar position="static" >
     {/* <AppBar position="static" className={classes.headerStyles}> */}
-      <Toolbar>
+      <Toolbar className={classes.appBar}>
         <Typography className={classes.typographyStyles}>
           Kyle Chriscoe
         </Typography>

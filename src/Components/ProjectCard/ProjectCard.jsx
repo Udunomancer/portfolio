@@ -11,13 +11,13 @@ function ProjectCard(props) {
     const { imgSrc, title, description, repoLink, pageLink } = props;
 
     return (
-        <Card >
-            <CardHeader title={title} className={classes.primaryColor} />
-            <CardMedia style={{height: "150px" }} image={imgSrc} />
-            <CardContent className={classes.lightColor}>
+        <Card className={classes.card}>
+            <CardHeader title={title} />
+            <CardMedia image={imgSrc} className={classes.cardMedia}/>
+            <CardContent>
                 <Typography>{description}</Typography>
             </CardContent>
-            <CardActions className={classes.primaryColor}>
+            <CardActions>
                 <Button component="a" href={repoLink}>Repository</Button>
                 <Button component="a" href={pageLink}>Page</Button>
             </CardActions>

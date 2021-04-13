@@ -17,9 +17,17 @@ function App() {
   return (
     <Router>
       <ThemeProvider theme={theme}>
-        <Header appTheme={appTheme} setAppTheme={setAppTheme}/>
-        <Main />
-        <Footer />
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            minHeight: "100vh",
+          }}
+        >
+          <Header appTheme={appTheme} setAppTheme={setAppTheme} />
+          <Main />
+          <Footer />
+        </div>
       </ThemeProvider>
     </Router>
   );

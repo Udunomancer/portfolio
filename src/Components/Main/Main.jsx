@@ -3,15 +3,18 @@ import React from "react";
 import { Route, Switch } from "react-router-dom";
 // import Material-UI components
 import Grid from "@material-ui/core/Grid";
+// import component specific Material-UI styling
+import useStyles from "./MainStyle";
 // import custom Pages
 import About from "../../Pages/About/About";
 import Contact from "../../Pages/Contact/Contact";
 import Portfolio from "../../Pages/Portfolio/Portfolio";
 
 function Main() {
+    const classes = useStyles();
 
     return (
-        <Grid container>
+        <Grid container className={classes.background}>
             <Grid item xs={false} sm={2} />
             <Grid item xs={12} sm={8}>
                 <Switch>

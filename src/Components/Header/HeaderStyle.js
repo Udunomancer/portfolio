@@ -5,7 +5,7 @@ const useStyles = makeStyles((theme) => ({
         flex: 1,
     },
     headerStyles: {
-        marginBottom: "10px",
+        marginBottom: "0px",
     },
 }))
 

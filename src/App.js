@@ -13,6 +13,7 @@ import Portfolio from "./Pages/Portfolio/Portfolio";
 import Header from "./Components/Header/Header";
 
 function App() {
+  
   const [appTheme, setAppTheme] = useState(true);
   const theme = appTheme ? { ...DarkMode } : { ...LightMode };
   // const theme = React.useMemo(

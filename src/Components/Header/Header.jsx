@@ -10,7 +10,7 @@ function Header() {
   const classes = useStyles();
 
   return (
-    <AppBar position="static">
+    <AppBar position="static" className={classes.headerStyles}>
       <Toolbar>
         <Typography className={classes.typographyStyles}>
           Kyle Chriscoe

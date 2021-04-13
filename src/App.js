@@ -2,15 +2,17 @@
 import React, { useState } from "react";
 import { HashRouter as Router, Route, Switch } from "react-router-dom";
 // import Material-UI components
-import { Grid, Paper, Switch as MUISwitch } from "@material-ui/core";
+import { Container, Grid, Paper, Switch as MUISwitch } from "@material-ui/core";
 import { ThemeProvider } from "@material-ui/core/styles";
 // import custom Material-UI Theme
 import { DarkMode, LightMode } from "./Utils/Theming";
 // import custom Components/Pages
+import Main from "./Components/Main/Main";
 import About from "./Pages/About/About";
 import Contact from "./Pages/Contact/Contact";
 import Portfolio from "./Pages/Portfolio/Portfolio";
 import Header from "./Components/Header/Header";
+import Footer from "./Components/Footer/Footer";
 
 function App() {
   
@@ -24,12 +26,14 @@ function App() {
   return (
     <Router>
       <ThemeProvider theme={theme}>
-        <Paper style={{ height: "100vh" }}>
-          <Grid container direction="column">
-            <Grid item>
+        {/* <Container width="100vh"> */}
+        {/* <Paper style={{ height: "100vh" }}> */}
+          {/* <Grid container direction="column"> */}
+            {/* <Grid item> */}
               <Header />
-            </Grid>
-            <Grid container item>
+            {/* </Grid> */}
+            <Main />
+            {/* <Grid container item>
               <Grid item xs={false} sm={2} >
                 <MUISwitch 
                   checked={appTheme}
@@ -45,9 +49,10 @@ function App() {
                 </Switch>
               </Grid>
               <Grid item xs={false} sm={2} />
-            </Grid>
-          </Grid>
-        </Paper>
+            </Grid> */}
+          {/* </Grid> */}
+          <Footer />
+        {/* </Paper> */}
       </ThemeProvider>
     </Router>
   );

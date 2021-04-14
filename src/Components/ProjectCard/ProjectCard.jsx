@@ -18,8 +18,8 @@ function ProjectCard(props) {
                 <Typography>{description}</Typography>
             </CardContent>
             <CardActions>
-                <Button component="a" href={repoLink}>Repository</Button>
-                <Button component="a" href={pageLink}>Page</Button>
+                <Button component="a" href={repoLink} className={classes.button}>Repository</Button>
+                <Button component="a" href={pageLink} className={classes.button}>Page</Button>
             </CardActions>
         </Card>
     );

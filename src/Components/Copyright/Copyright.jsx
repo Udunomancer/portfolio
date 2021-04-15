@@ -7,19 +7,22 @@ import Link from "@material-ui/core/Link";
 import useStyles from "./CopyrightStyle";
 
 function Copyright() {
-    const classes = useStyles();
+  const classes = useStyles();
 
-    return (
-        <Typography variant="body2" color="textSecondary" className={classes.typography}>
-            {"Copyright © "}
-            <Link color="inherit" href="https://github.com/Udunomancer">
-                Kyle Chriscoe
-            </Link>
-            {" "}
-            {new Date().getFullYear()}
-            {"."}
-        </Typography>
-    );
+  return (
+    <Typography
+      variant="body2"
+      color="textSecondary"
+      className={classes.copyright}
+    >
+      {"Copyright © "}
+      <Link color="inherit" href="https://github.com/Udunomancer">
+        Kyle Chriscoe
+      </Link>{" "}
+      {new Date().getFullYear()}
+      {"."}
+    </Typography>
+  );
 }
 
 export default Copyright;

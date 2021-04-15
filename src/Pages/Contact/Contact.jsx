@@ -1,47 +1,52 @@
 // import default React components
 import React, { useState } from "react";
 // import Material-UI components
+import Button from "@material-ui/core/Button";
 import Divider from "@material-ui/core/Divider";
 import Grid from "@material-ui/core/Grid";
 import Paper from "@material-ui/core/Paper";
 import TextField from "@material-ui/core/TextField";
 import Typography from "@material-ui/core/Typography";
+// import Material-UI Styling
+import useStyles from "../../Utils/Styles/UniversalStyles";
 // import emailJS package
 import * as emailjs from "emailjs-com";
 import resume from "../../Assets/Resume.pdf";
-import "./Contact.css";
 
 function Contact() {
+  const classes = useStyles();
   const [message, setMessage] = useState({
-      name: "",
-      email: "",
-      subject: "",
-      message: "",
-  })
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
 
   function handleSubmit(e) {
     e.preventDefault();
+    console.log(e);
+    // let templateParams = {
+    //   from_name: message.email,
+    //   to_name: "kyle717+portfolio@gmail.com",
+    //   subject: message.subject,
+    //   message_html: message.message,
+    // }
 
-    let templateParams = {
-      from_name: message.email,
-      to_name: "kyle717+portfolio@gmail.com",
-      subject: message.subject,
-      message_html: message.message,
-    }
+    // emailjs.send(
+    //   "gmail",
+    //   "template_7aq6hjl",
+    //   templateParams,
+    //   "user_8aUtJJm2xTXAI6QnyUFCr"
+    // );
 
-    emailjs.send(
-      "gmail",
-      "template_7aq6hjl",
-      templateParams,
-      "user_8aUtJJm2xTXAI6QnyUFCr"
-    );
+    resetForm();
   }
 
   function handleChange(param, value) {
     setMessage({
       ...message,
-      [param]: value
-    })
+      [param]: value,
+    });
   }
 
   function resetForm() {
@@ -49,66 +54,105 @@ function Contact() {
       name: "",
       email: "",
       subject: "",
-      message: ""
+      message: "",
     });
   }
 
-  // function handleInputChange(event) {
-  //     const name = event.target.name;
-  //     const value = event.target.value;
-  //     setMessage({...message, [name]: value});
-  //     setMessage({...message, href: `mailto:kyle717@gmail.com?subject=${message.subject}&body=${message.body}`})
-  // }
-
   return (
     <Paper>
-      <Grid container>
-        <Grid item xs={12}>
-          <Typography>Message me directly</Typography>
-        </Grid>
-        <form noValidate autoComplete="off" style={{ width: "100%" }}>
-          <Grid container item xs={12}>
-            <Grid container item xs={4}>
-              <Grid item xs={12}>
-                <TextField id="name" label="Name" value={message.name} onChange={(e) => {handleChange(e.target.id, e.target.value)}} required fullWidth />
-              </Grid>
-              <Grid item xs={12}>
-                <TextField id="email" label="Email" value={message.email} onChange={(e) => {handleChange(e.target.id, e.target.value)}} required fullWidth />
-              </Grid>
-            </Grid>
-            <Grid container item xs={8}>
-              <Grid item xs={12}>
-                <TextField id="subject" label="Subject" value={message.subject} onChange={(e) => {handleChange(e.target.id, e.target.value)}} required fullWidth />
-              </Grid>
-              <Grid item xs={12}>
-                <TextField id="message" label="Message" value={message.message} onChange={(e) => {handleChange(e.target.id, e.target.value)}} required fullWidth />
-              </Grid>
-            </Grid>
+      <Typography align="center" variant="h4">
+        Message me directly
+      </Typography>
+      <form noValidate autoComplete="off">
+        <Grid container justify="center" spacing={1}>
+          <Grid item xs={6}>
+            <TextField
+              id="name"
+              label="Name"
+              value={message.name}
+              variant="filled"
+              onChange={(e) => {
+                handleChange(e.target.id, e.target.value);
+              }}
+              required
+              fullWidth
+            />
           </Grid>
-        </form>
-        <Grid item xs={12}>
-          <Typography>View my GitHub/LinkedIn</Typography>
-          <Divider />
-        </Grid>
-        <Grid container item xs={12}>
-          <Grid container item xs={12} sm={6}>
-            <Grid item xs={12}>
-              <Typography>GitHub:</Typography>
-            </Grid>
-            <Grid item xs={12}>
-              <Typography>LinkedIn:</Typography>
-            </Grid>
-            <Grid item xs={12}>
-              <Typography>Resume:</Typography>
-            </Grid>
+          <Grid item xs={6}>
+            <TextField
+              id="email"
+              label="Email"
+              value={message.email}
+              variant="filled"
+              onChange={(e) => {
+                handleChange(e.target.id, e.target.value);
+              }}
+              required
+              fullWidth
+            />
           </Grid>
-          <Grid container item xs={12} sm={6}>
-            <Grid item xs={12}>
-              <Typography>Email:</Typography>
-            </Grid>
-            <Grid item xs={12}>
-              <Typography>Phone:</Typography>
-            </Grid>
+          <Grid item xs={12}>
+            <TextField
+              id="subject"
+              label="Subject"
+              value={message.subject}
+              variant="filled"
+              onChange={(e) => {
+                handleChange(e.target.id, e.target.value);
+              }}
+              required
+              fullWidth
+            />
+          </Grid>
+          <Grid item xs={12}>
+            <TextField
+              id="message"
+              label="Message"
+              multiline
+              rows={4}
+              value={message.message}
+              variant="filled"
+              onChange={(e) => {
+                handleChange(e.target.id, e.target.value);
+              }}
+              required
+              fullWidth
+            />
+          </Grid>
+          <Grid item xs={12}>
+            <Button
+              type="submit"
+              fullWidth
+              className={classes.button_contained}
+              onClick={handleSubmit}
+            >
+              Send
+            </Button>
+          </Grid>
+        </Grid>
+      </form>
+      <Grid item xs={12}>
+        <Typography>View my GitHub/LinkedIn</Typography>
+        <Divider />
+      </Grid>
+      <Grid container item xs={12}>
+        <Grid container item xs={12} sm={6}>
+          <Grid item xs={12}>
+            <Typography>GitHub:</Typography>
+          </Grid>
+          <Grid item xs={12}>
+            <Typography>LinkedIn:</Typography>
+          </Grid>
+          <Grid item xs={12}>
+            <Typography>Resume:</Typography>
+          </Grid>
+        </Grid>
+        <Grid container item xs={12} sm={6}>
+          <Grid item xs={12}>
+            <Typography>Email:</Typography>
+          </Grid>
+          <Grid item xs={12}>
+            <Typography>Phone:</Typography>
           </Grid>
         </Grid>
       </Grid>

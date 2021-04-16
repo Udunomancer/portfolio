@@ -3,7 +3,7 @@ import React from "react";
 // import Material-UI components
 import { Button, Card, CardActions, CardContent, CardHeader, CardMedia, Typography } from "@material-ui/core";
 // import component specific Material-UI styling
-import useStyles from "./ProjectCardStyle";
+import useStyles from "../../Utils/Styles/UniversalStyles";
 
 function ProjectCard(props) {
     const classes = useStyles();
@@ -18,8 +18,8 @@ function ProjectCard(props) {
                 <Typography>{description}</Typography>
             </CardContent>
             <CardActions>
-                <Button component="a" href={repoLink} className={classes.button}>Repository</Button>
-                <Button component="a" href={pageLink} className={classes.button}>Page</Button>
+                <Button component="a" href={repoLink} className={classes.button_text}>Repository</Button>
+                <Button component="a" href={pageLink} className={classes.button_text}>Page</Button>
             </CardActions>
         </Card>
     );

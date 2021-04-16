@@ -24,7 +24,7 @@ function Contact() {
 
   function handleSubmit(e) {
     e.preventDefault();
-    console.log(e);
+  
     let templateParams = {
       from_name: message.name,
       from_email: message.email,

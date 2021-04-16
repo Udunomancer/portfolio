@@ -28,7 +28,8 @@ const useStyles = makeStyles((theme) => ({
     "&:hover": {
       backgroundColor: theme.palette.secondary.dark,
     },
-    borderRadius: 0,
+    borderTopLeftRadius: 0,
+    borderTopRightRadius: 0,
   },
   button_text: {
     color:

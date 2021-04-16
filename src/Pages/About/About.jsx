@@ -1,6 +1,9 @@
 // import default React components
 import React from "react";
+// import class combiner
+import clsx from "clsx";
 // import Material-UI components
+import Avatar from "@material-ui/core/Avatar";
 import Grid from "@material-ui/core/Grid";
 import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
@@ -13,59 +16,28 @@ function About() {
   const profile = require("../../Assets/Images/profile.png").default;
 
   return (
-    <Grid container>
-      <Grid item xs={12}>
-        <Paper>
-          <Typography align="center" variant="h4">
-            About me
-          </Typography>
-        </Paper>
-      </Grid>
+    <Grid container spacing={1}>
       <Grid item xs={4}>
         <Paper>
           <Typography>More about me</Typography>
+          <Typography>GitHub:</Typography>
+          <Typography>LinkedIn:</Typography>
+          <Typography>Resume:</Typography>
+          <Typography>Email: kyle717@gmail.com</Typography>
         </Paper>
       </Grid>
       <Grid item xs={8}>
-        <Paper>
-          <Typography align="center" variant="h4">
-            About me
+        <Paper className={clsx(classes.flex, classes.paper)}>
+        <Avatar alt="Kyle Chriscoe" src={profile} className={classes.avatar} />
+          <Typography variant="body1" display="inline">
+            Thanks for visiting my Profile! I am a full-stack software developer
+            currently enrolled in the Georgia Tech Full-Stack Coding Boot Camp.
+            I have 4 years of systems experience as a HR Information Systems
+            Analyst, working on several Human Resources platforms.
           </Typography>
         </Paper>
       </Grid>
     </Grid>
-    // <div id="about-page" className="container pt-2">
-    //   <div className="row">
-    //     <div className="about-page col-md-9 py-3 mx-2">
-    //       <div className="row mx-2">
-    //         <div className="col-sm-12">
-    //           <h1 className="border-bottom py-3">
-    //             <strong>About</strong>
-    //           </h1>
-    //         </div>
-    //       </div>
-    //       <div className="row m-2 py-2">
-    //         <div className="col-sm-12">
-    //           <img
-    //             src={profile}
-    //             alt="Personal"
-    //             className="img-fluid float-left w-25 p-2 mr-2"
-    //             id="about-image"
-    //           />
-    //           <article className="single-post-content-wraper p-2">
-    //             <p>
-    //               Thanks for visiting my Profile! I am a full-stack software
-    //               developer currently enrolled in the Georgia Tech Full-Stack
-    //               Coding Boot Camp. I have 4 years of systems experience as a HR
-    //               Information Systems Analyst, working on several Human
-    //               Resources platforms.
-    //             </p>
-    //           </article>
-    //         </div>
-    //       </div>
-    //     </div>
-    //   </div>
-    // </div>
   );
 }
 

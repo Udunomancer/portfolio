@@ -10,6 +10,11 @@ const useStyles = makeStyles((theme) => ({
         ? theme.palette.secondary.dark
         : theme.palette.primary.main,
   },
+  avatar: {
+    width: theme.spacing(12),
+    height: theme.spacing(12),
+    marginRight: theme.spacing(2),
+  },
   background: {
     backgroundColor: theme.palette.primary.light,
     paddingTop: "10px",
@@ -41,10 +46,16 @@ const useStyles = makeStyles((theme) => ({
   copyright: {
     textAligh: "center",
   },
+  flex: {
+    display: "flex",
+  },
   footer: {
     backgroundColor: theme.palette.primary.dark,
     marginTop: "auto",
     padding: theme.spacing(1, 2),
+  },
+  paper: {
+    padding: theme.spacing(2),
   },
   typography_header: {
     flex: 1,

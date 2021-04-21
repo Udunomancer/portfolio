@@ -15,7 +15,7 @@ import resume from "../../Assets/Resume.pdf";
 function About() {
   const classes = useStyles();
   const profile = require("../../Assets/Images/profile.png").default;
-  const [subSection, setSubSection] = useState(2);
+  const [subSection, setSubSection] = useState(1);
 
   return (
     <Grid container spacing={1}>
@@ -64,11 +64,14 @@ function About() {
               className={classes.avatar}
             />
             <Typography variant="body1" display="inline">
-              Thanks for visiting my Profile! I am a full-stack software
-              developer currently enrolled in the Georgia Tech Full-Stack Coding
-              Boot Camp. I have 4 years of systems experience as a HR
-              Information Systems Analyst, working on several Human Resources
-              platforms.
+              Thanks for visiting my Profile! I am a full-stack web developer
+              interested in building interactive web applications with a Web
+              Development certificate from Georgia Tech. Well-versed in React
+              and jQuery, with professional experience writing HTML, CSS, and
+              JavaScript in ServiceNow. Prior experience as an HR Information
+              Systems Analyst, managing all recruiting platforms for a Fortune
+              500 company, building workflows, implementations, and integrations
+              to develop a user friendly HR experience.
             </Typography>
           </Paper>
         )}

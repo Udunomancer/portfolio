@@ -81,11 +81,7 @@ function About() {
             <Typography>My GitHub and LinkedIn</Typography>
           </Paper>
         )}
-        {subSection === 3 && (
-          <Paper className={clsx(classes.flex, classes.paper)}>
-            <Resume />
-          </Paper>
-        )}
+        {subSection === 3 && <Resume />}
       </Grid>
     </Grid>
   );

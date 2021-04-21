@@ -45,7 +45,7 @@ const useStyles = makeStyles((theme) => ({
   },
   cardMedia: { paddingTop: "56.25%" },
   copyright: {
-    textAligh: "center",
+    textAlign: "center",
   },
   flex: {
     display: "flex",
@@ -57,6 +57,7 @@ const useStyles = makeStyles((theme) => ({
   },
   paper: {
     padding: theme.spacing(2),
+    justifyContent: "center",
   },
   typography_header: {
     flex: 1,

@@ -21,7 +21,12 @@ function Resume() {
     <Paper className={classes.paper}>
       <Grid container spacing={1}>
         <Grid item xs={12}>
-          <Button className={classes.button_contained} component="a" href={resume} download>
+          <Button
+            className={classes.button_contained}
+            component="a"
+            href={resume}
+            download
+          >
             <GetAppIcon />
             Download
           </Button>

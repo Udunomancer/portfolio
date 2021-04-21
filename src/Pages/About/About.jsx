@@ -10,6 +10,9 @@ import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
 // import Material-UI Styling
 import useStyles from "../../Utils/Styles/UniversalStyles";
+// import Material-UI Icons
+import GitHubIcon from "@material-ui/icons/GitHub";
+import LinkedInIcon from "@material-ui/icons/LinkedIn";
 // import custom Components
 import Resume from "../../Components/Resume/Resume";
 
@@ -78,7 +81,17 @@ function About() {
         )}
         {subSection === 2 && (
           <Paper className={clsx(classes.flex, classes.paper)}>
-            <Typography>My GitHub and LinkedIn</Typography>
+            <Button
+              className={classes.button_contained}
+              component="a"
+              href="https://github.com/Udunomancer"
+              target="_blank"
+            ><GitHubIcon />GitHub: github.com/Udunomancer</Button>
+            <Button
+              className={classes.button_contained}
+              component="a"
+              href="https://www.linkedin.com/in/kyle-chriscoe/"
+              target="_blank"><LinkedInIcon />LinkedIn: linkedin.com/in/kyle-chriscoe</Button>
           </Paper>
         )}
         {subSection === 3 && <Resume />}

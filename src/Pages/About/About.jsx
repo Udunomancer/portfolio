@@ -10,7 +10,8 @@ import Paper from "@material-ui/core/Paper";
 import Typography from "@material-ui/core/Typography";
 // import Material-UI Styling
 import useStyles from "../../Utils/Styles/UniversalStyles";
-import resume from "../../Assets/Resume.pdf";
+// import custom Components
+import Resume from "../../Components/Resume/Resume";
 
 function About() {
   const classes = useStyles();
@@ -82,7 +83,7 @@ function About() {
         )}
         {subSection === 3 && (
           <Paper className={clsx(classes.flex, classes.paper)}>
-            <Typography>My Resume</Typography>
+            <Resume />
           </Paper>
         )}
       </Grid>

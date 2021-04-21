@@ -2,16 +2,13 @@
 import React, { useState } from "react";
 // import Material-UI components
 import Button from "@material-ui/core/Button";
-import Divider from "@material-ui/core/Divider";
 import Grid from "@material-ui/core/Grid";
 import Paper from "@material-ui/core/Paper";
 import TextField from "@material-ui/core/TextField";
-import Typography from "@material-ui/core/Typography";
 // import Material-UI Styling
 import useStyles from "../../Utils/Styles/UniversalStyles";
 // import emailJS package
 import * as emailjs from "emailjs-com";
-import resume from "../../Assets/Resume.pdf";
 
 function Contact() {
   const classes = useStyles();

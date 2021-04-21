@@ -8,7 +8,7 @@ import resume from "../../Assets/Resume.pdf";
 function Resume() {
 
     return (
-        <Document file={resume}>
+        <Document file={resume} onLoadError={console.error}>
             <Page pageNumber={1} />
         </Document>
     );

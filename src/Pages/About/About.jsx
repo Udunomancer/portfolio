@@ -83,15 +83,26 @@ function About() {
           <Paper className={clsx(classes.flex, classes.paper)}>
             <Button
               className={classes.button_contained}
+              fullWidth
+              style={{margin: 2}}
               component="a"
               href="https://github.com/Udunomancer"
               target="_blank"
-            ><GitHubIcon />GitHub: github.com/Udunomancer</Button>
+            >
+              <GitHubIcon />
+              GitHub
+            </Button>
             <Button
               className={classes.button_contained}
+              fullWidth
+              style={{margin: 2}}
               component="a"
               href="https://www.linkedin.com/in/kyle-chriscoe/"
-              target="_blank"><LinkedInIcon />LinkedIn: linkedin.com/in/kyle-chriscoe</Button>
+              target="_blank"
+            >
+              <LinkedInIcon />
+              LinkedIn
+            </Button>
           </Paper>
         )}
         {subSection === 3 && <Resume />}
